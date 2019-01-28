@@ -1,14 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DemoApp"
-             x:Class="DemoApp.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+<ContentPage
+    x:Class="DemoApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoApp"
+    BackgroundColor="#EFEFF4">
+    <StackLayout Padding="0,20,0,0" Spacing="0">
+        <local:ExpandableLabel
+            Title="Title 1"
+            HorizontalOptions="FillAndExpand"
+            Text="Text 1" />
+        <local:ExpandableLabel
+            Title="Title 2"
+            HorizontalOptions="FillAndExpand"
+            Text="Text 2" />
+        <local:ExpandableLabel
+            Title="Title 3"
+            HorizontalOptions="FillAndExpand"
+            Text="Text 3" />
+        <local:ExpandableLabel
+            Title="Title 4"
+            HorizontalOptions="FillAndExpand"
+            Text="Text 4" />
     </StackLayout>
 
 </ContentPage>

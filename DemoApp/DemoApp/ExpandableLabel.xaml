@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DemoApp.ExpandableLabel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentView.Content>
+        <StackLayout
+            Padding="0"
+            BackgroundColor="White"
+            Spacing="0">
+            <StackLayout
+                x:Name="Header"
+                Padding="10"
+                BackgroundColor="Accent"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Title_Clicked" />
+                </StackLayout.GestureRecognizers>
+                <Label x:Name="TitleText" Text="{Binding Title}" />
+            </StackLayout>
+            <StackLayout
+                x:Name="ExpandableContent"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                Opacity="0">
+                <StackLayout x:Name="AuxContainer" Padding="10">
+                    <Label x:Name="ExpandableText" Text="{Binding Text}" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
