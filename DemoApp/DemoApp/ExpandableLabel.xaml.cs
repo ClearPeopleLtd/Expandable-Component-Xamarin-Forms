@@ -54,7 +54,7 @@ namespace DemoApp
         public ExpandableLabel()
         {
             InitializeComponent();
-            ExpandableContent.HeightRequest = 0;
+            ExpandableLayout.HeightRequest = 0;
             ExpandableText.Text = Text;
             TitleText.Text = Title;
         }
@@ -77,19 +77,19 @@ namespace DemoApp
             if (!_IsExpanding)
             {
                 _IsExpanding = true;
-                var height = AuxContainer.Height;
+                var height = ExpandableContent.Height;
                 if (_IsExpanded)
                 {
-                    var animation = new Animation(v => ExpandableContent.HeightRequest = v, height, 0);
-                    await ExpandableContent.FadeTo(0, 250);
+                    var animation = new Animation(v => ExpandableLayout.HeightRequest = v, height, 0);
+                    await ExpandableLayout.FadeTo(0, 250);
                     animation.Commit(this, "ExpandSize", 16, 250);
 
                 }
                 else
                 {
-                    var animation = new Animation(v => ExpandableContent.HeightRequest = v, 0, height);
+                    var animation = new Animation(v => ExpandableLayout.HeightRequest = v, 0, height);
                     animation.Commit(this, "ExpandSize", 16, 250);
-                    await ExpandableContent.FadeTo(1, 250);
+                    await ExpandableLayout.FadeTo(1, 250);
                 }
                 _IsExpanded = !_IsExpanded;
                 _IsExpanding = false;

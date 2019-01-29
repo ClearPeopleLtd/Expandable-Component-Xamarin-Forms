@@ -19,11 +19,11 @@
                 <Label x:Name="TitleText" Text="{Binding Title}" />
             </StackLayout>
             <StackLayout
-                x:Name="ExpandableContent"
+                x:Name="ExpandableLayout"
                 Padding="0"
                 HorizontalOptions="FillAndExpand"
                 Opacity="0">
-                <StackLayout x:Name="AuxContainer" Padding="10">
+                <StackLayout x:Name="ExpandableContent" Padding="10">
                     <Label x:Name="ExpandableText" Text="{Binding Text}" />
                 </StackLayout>
             </StackLayout>
